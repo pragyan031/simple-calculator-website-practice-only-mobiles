@@ -1,0 +1,273 @@
+/* importing font family */
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* defining all variables */
+:root {
+  /* text colors variables */
+
+  --num-btn-text-clr: hsl(221, 14%, 31%);
+  --not-num-btn-text-clr: hsl(0, 0%, 100%);
+
+  /* ----------------------------------------------------------------------------------------------------- */
+
+  /* background colors variables */
+
+  --num-btn-bg-clr: hsl(30, 25%, 89%);
+  --del-re-btn-bg-clr: hsl(225, 21%, 49%);
+  --res-btn-bg-clr: hsl(6, 63%, 50%);
+  --all-btn-full-bg-clr: hsl(223, 31%, 20%);
+  --inp-exp-field-bg-clr: hsl(224, 36%, 15%);
+  --theme-selector-bg-clr: hsl(6, 63%, 50%);
+  --theme-selector-con-bg-clr: hsl(223, 31%, 20%);
+  --main-page-bg-clr: hsl(222, 26%, 31%);
+
+  /* ----------------------------------------------------------------------------------------------------- */
+
+  /* box shadow  color variables */
+
+  --num-btn-box-shdw-clr: hsl(28, 16%, 65%);
+  --del-re-btn-box-shdw-clr: hsl(224, 28%, 35%);
+  --res-btn-box-shdw-clr: hsl(6, 70%, 34%);
+
+  /* ----------------------------------------------------------------------------------------------------- */
+
+  /* border radius variables */
+
+  --all-btn-border-rad: 10px;
+  --all-btn-full-bg-border-rad: 15px;
+
+  /* font style variables */
+  --num-btn-text-size: 32px;
+  --num-btn-text-weight: 700;
+  --all-text-fam: "League Spartan", sans-serif;
+}
+
+/* defining styles */
+*:not(#out-in-scr) {
+  text-transform: uppercase;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--all-text-fam);
+}
+.container {
+  color: var(--not-num-btn-text-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  background-color: var(--main-page-bg-clr);
+  height: 100vh;
+  font-family: var(--all-text-fam);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  height: 15%;
+  /* border: 2px solid red; */
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  width: 88%;
+  /* border: 2px solid red; */
+  height: 85%;
+}
+#theme-selector-main-con {
+  display: flex;
+  align-items: flex-end;
+  transform: translateY(5px);
+  /* border: 2px solid red; */
+  /* border: 2px solid red; */
+  width: 50%;
+  padding-block: 20px;
+  /* height: 100%; */
+  padding-inline: 10px;
+  gap: 30px;
+  /* justify-content: space-between; */
+  /* padding-top: 40px; */
+}
+#top-heading {
+  text-transform: lowercase;
+  width: 50%;
+  display: flex;
+  height: 40%;
+  align-items: flex-end;
+  text-align: start;
+  transform: translateY(-10px);
+}
+#theme-selector-con {
+  /* position: relative; */
+  /* top: 7px; */
+  display: flex;
+  /* border: 2px solid red; */
+  width: 50%;
+  gap: 1px;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#theme-selector-text {
+  display: flex;
+  /* gap: 20px;0 */
+  /* border-radius: 50px; */
+  padding: 0px 5px;
+  text-align: center;
+  /* border: 2px solid red; */
+  justify-content: flex-start;
+
+  /* background-color: var(--theme-selector-con-bg-clr); */
+  width: 100%;
+  justify-content: space-between;
+}
+#theme-selector-btn-con {
+  display: flex;
+  background-color: var(--theme-selector-con-bg-clr);
+  padding: 4px 5px;
+  border-radius: 50px;
+  width: 100%;
+  /* Removed the transition on justify-content */
+}
+
+#t-s-b {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--theme-selector-bg-clr);
+  margin: 0;
+  left: 0; /* Define a starting position for left */
+  transition: all 0.5s ease-in-out;
+}
+
+/* #t-s-b:hover {
+  left: 100%; /* This will now transition smoothly from 0 to 50% */
+/* transform: translateX(-100%);
+  background-color: cyan;
+} */
+/* #theme-selector-btn-con:hover #t-s-b { */
+/* } */
+
+#theme-selector-t-b-con {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+.t-s-t {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 600;
+  /* background-color: red; */
+  width: 15px;
+  height: 15px;
+  font-size: 0.7rem;
+}
+#theme-text {
+  padding-block: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  /* border: 2px solid red; */
+}
+#out-in-scr {
+  cursor: none;
+  padding-block: 10%;
+  padding-inline: 8%;
+  font-size: 2.5em;
+  text-align: right;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  color: var(--not-num-btn-text-clr);
+  border-radius: var(--all-btn-full-bg-border-rad);
+  background-color: var(--inp-exp-field-bg-clr);
+}
+#all-calc-btn-con {
+  background-color: var(--all-btn-full-bg-clr);
+  display: grid;
+  height: 65%;
+  justify-content: space-around;
+  /* justify-items: center; */
+  align-content: center;
+  /* align-items: center; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  font-size: 2rem;
+  border-radius: var(--all-btn-full-bg-border-rad);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.reset-btn,
+.res-btn {
+  grid-column: span 2;
+  background-color: var(--res-btn-bg-clr);
+  font-size: 1.4rem;
+  border-bottom: 4px solid var(--res-btn-box-shdw-clr);
+}
+.num-btn,
+.op-btn {
+  background-color: var(--num-btn-bg-clr);
+  color: var(--num-btn-text-clr);
+  font-weight: 600;
+  border-bottom: 4px solid var(--num-btn-box-shdw-clr);
+}
+.calc-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--all-btn-border-rad);
+  text-align: center;
+  padding: 10px;
+}
+.re-del-btn {
+  background-color: var(--del-re-btn-bg-clr);
+  font-size: 1.4rem;
+  border-bottom: 4px solid var(--del-re-btn-box-shdw-clr);
+}
+.bracket {
+  grid-column: span 2;
+}
+/*#madeby {
+  margin-top: -20px;
+}
+#my-name-con {
+  position: relative;
+  border: 2px solid red;
+  /* background-clip: text; */
+/* -webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+/*}
+#my-name {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  border: 2px solid red;
+  margin-top: -20px;
+  background: transparent;
+  /* background-clip: text; */
+/* -webkit-background-clip: text; */
+/* -webkit-text-fill-color: transparent; */
+/*padding-bottom: 10px;
+  /* background: linear-gradient(to right, red, blue, lime); */
+/*}
+#name-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+*/
